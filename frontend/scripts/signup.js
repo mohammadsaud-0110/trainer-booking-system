@@ -1,5 +1,5 @@
 const form = document.querySelector("form");
-const URL = ""
+const URL = "https://flexfit.onrender.com"
 
 const signup = document.getElementById("submit");
 const client_checked= document.getElementById("radio1")

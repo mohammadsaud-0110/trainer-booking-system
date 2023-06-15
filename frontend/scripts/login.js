@@ -1,4 +1,4 @@
-const URL = ""
+const URL = "https://flexfit.onrender.com"
 const form = document.querySelector("form");
 const submit = document.getElementById("submit");
 

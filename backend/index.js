@@ -2,6 +2,7 @@ const express = require("express");
 const {connection} = require("./config/db")
 const {bookingRoute} = require("./controller/booking.route")
 const cors = require('cors');
+const { userRoute } = require("./controller/user.route");
 require("dotenv").config();
 
 const app = express();
@@ -13,6 +14,7 @@ app.get("/",(req,res)=>{
 })
 
 app.use("/booking", bookingRoute);
+app.use("/user",userRoute)
 
 app.listen(process.env.serverPort, async()=>{
     try {
