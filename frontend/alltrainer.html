@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FlexFit | ALL Trainer </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="/frontend/style/style.css">
+    <link rel="stylesheet" href="./style/trainer.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Start Header  -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="./images/logo.png" alt="" srcset="">
+            </div>
+            <a href="javascript:void(0)" class="ham-burger">
+                <span></span>
+                <span></span>
+            </a>
+            <div class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#price">Price</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#price">Login</a></li>
+                    <li><a href="#contact">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- End Header  -->
+
+    <!-- Start Home -->
+
+
+    <div class="loader" id="loader">
+    </div>
+    <!-- Loader End -->
+    <div id="sorting_div">
+        <div id="count_div"></div>
+        <div id="location_div">
+            <select id="location">
+                <option selected value="">Choose a location</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Pune">Pune</option>
+                <option value="Lucknow">Lucknow</option>
+                <option value="Noida">Noida</option>
+                <option value="Gurugram">Gurugram</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Kerela">Kerela</option>
+            </select>
+        </div>
+        <div id="sort">
+            <select id="form-select" aria-label="Default select example">
+                <option selected value="">Sort by Price:</option>
+                <option value="desc">High-to-low</option>
+                <option value="asc">Low-to-high</option>
+                <option value="3">Recommended</option>
+            </select>
+        </div>
+    </div>
+    <hr id="sort_line" />
+
+    <div id="search-results">
+        <!-- Append Here -->
+        <div class="loader2" id="loader2">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <div class="bar4"></div>
+            <div class="bar5"></div>
+            <div class="bar6"></div>
+            <div class="bar7"></div>
+            <div class="bar8"></div>
+            <div class="bar9"></div>
+            <div class="bar10"></div>
+            <div class="bar11"></div>
+            <div class="bar12"></div>
+        </div>
+    </div>
+
+    <!-- <div id="sorting_div">
+        <div id="location_div">
+            <select id="location">
+                <option selected value="">Choose a location</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Pune">Pune</option>
+                <option value="Lucknow">Lucknow</option>
+                <option value="Noida">Noida</option>
+                <option value="Gurugram">Gurugram</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Kerela">Kerela</option>
+    
+            </select>
+        </div>
+        <div id="sort">
+            <select id="form-select" aria-label="Default select example">
+                <option selected value="">Sort by Price:</option>
+                <option value="desc">High-to-low</option>
+                <option value="asc">Low-to-high</option>
+                <option value="3">Recommended</option>
+            </select>
+        </div>
+    </div>
+    <hr id="sort_line"/>
+    <div id="count_div"></div>
+    <div id="gallery"></div> -->
+    <footer>
+        <div>
+            <ul>
+                <li>Blog</li>
+                <li>Support</li>
+                <li>Terms</li>
+                <li>Privacy</li>
+            </ul>
+        </div>
+        <div>
+            <ion-icon name="logo-facebook"></ion-icon>
+            <ion-icon name="logo-instagram"></ion-icon>
+            <ion-icon name="logo-twitter"></ion-icon>
+            <span> Copyright @2023 FlexFit</span>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./scripts/trainer.js"></script>
+
+    <script src="js/wow.min.js"></script>
+    <script>
+        wow = new WOW(
+            {
+                animateClass: 'animated',
+                offset: 0,
+            }
+        );
+        wow.init();
+    </script>
+</body>
+
+</html>
