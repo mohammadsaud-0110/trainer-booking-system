@@ -1,7 +1,7 @@
 // users________________________________________________________________
 /**
  * @swagger
- * components:
+ * components:Ṅ
  *   schemas:
  *       User:
  *           type: object
@@ -30,7 +30,13 @@
  *                   description: Trainer expert in types of shots
  *               address:
  *                   type: string
- *                   description: Location where a user wants to do PhotoShoot
+ *                   description: Location  of flexfit
+ *               price:
+ *                   type:number
+ *                   description:Fee of trainer
+ *               isBlocked:
+ *                   type:boolean
+ *                   description:If user is blocked
  */
 
 /**
@@ -49,14 +55,14 @@
  *               start_time:
  *                   type: string
  *                   format: date
- *                   description: starting time of the photoshoot
+ *                   description: starting time of the flexfit
  *               end_time:
  *                   type: string
  *                   format: date
- *                   description: ending time of the photoshoot
+ *                   description: ending time of the flexfit
  *               status:
  *                   type: string
- *                   description: If booking is accepted rejected or is still pending after booking to a photgrapher
+ *                   description: If booking is accepted rejected or is still pending after booking to a Trainer
  */
 /**
  * @swagger
@@ -96,33 +102,27 @@
 //  *                   type: Array
 //  *                   description: Contains meeting for each users
 //  */
-// /**
-//  * @swagger
-//  * components:
-//  *   schemas:
-//  *       Image:
-//  *           type: object
-//  *           properties:
-//  *               name:
-//  *                   type: string
-//  *                   description: user's name
-//  *               image:
-//  *                   type: string
-//  *                   data: Buffer
-//  *                   description: Sample images of Trainer
-//  */
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *       Image:
+ *           type: object
+ *           properties:
+ *               name:
+ *                   type: string
+ *                   description: user's name
+ *               image:
+ *                   type: string
+ *                   data: Buffer
+ *                   description: Sample images of Trainer
+ */
 /**
  * @swagger
  * /user/:
  *   get:
  *       summary: To get details of all the registered user in Database
  *       tags: [Users]
- *       requestBody:
- *           required: false
- *           content:
- *               application/json:
- *                   schema:
- *                       $ref: '#/components/schemas/User'
  *       responses:
  *           200:
  *               description: All user Data Successfully fetched
@@ -133,6 +133,7 @@
  *           500:
  *               description: Some server error
  */
+
 /**
  * @swagger
  * /user/register:
@@ -205,12 +206,6 @@
  *   get:
  *       summary: All pending requests of users who have applied for becoming a Trainer
  *       tags: [Users]
- *       requestBody:
- *           required: false
- *           content:
- *               application/json:
- *                   schema:
- *                       $ref: '#/components/schemas/User'
  *       responses:
  *           200:
  *               description: Application Submitted Successfully
@@ -341,12 +336,6 @@
  *   get:
  *       summary: To get details of all the registered trainers in Database
  *       tags: [Trainers]
- *       requestBody:
- *           required: false
- *           content:
- *               application/json:
- *                   schema:
- *                       $ref: '#/components/schemas/User'
  *       responses:
  *           200:
  *               description: All trainers Data Successfully fetched
@@ -412,12 +401,6 @@
  *   get:
  *       summary: All bookings done by the Trainee
  *       tags: [Bookings]
- *       requestBody:
- *           required: false
- *           content:
- *               application/json:
- *                   schema:
- *                       $ref: '#/components/schemas/Booking'
  *       responses:
  *           200:
  *               description: All bookings fetched Successfully
@@ -456,12 +439,6 @@
  *   get:
  *       summary: Get all bookings for logged in Trainer
  *       tags: [Bookings]
- *       requestBody:
- *           required: true
- *           content:
- *               application/json:
- *                   schema:
- *                       $ref: '#/components/schemas/Booking'
  *       responses:
  *           200:
  *               description: Requests for meeting fetched Successfully
@@ -478,12 +455,6 @@
  *   get:
  *       summary: Get the status of requests sent by the Trainees
  *       tags: [Bookings]
- *       requestBody:
- *           required: false
- *           content:
- *               application/json:
- *                   schema:
- *                       $ref: '#/components/schemas/Booking'
  *       responses:
  *           200:
  *               description: Requests for meeting fetched Successfully
