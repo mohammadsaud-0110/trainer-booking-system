@@ -151,7 +151,7 @@ userRoute.get('/images', async (req, res)=>{
   res.send({images,trainers});
 });
 
-// Route for getting the Photographers sorted by price and filtered by location
+// Route for getting the trainers sorted by price and filtered by location
 userRoute.get('/SortByPrice', async (req, res)=>{
   let query = {}
   let sortby = {price:0}
@@ -188,10 +188,10 @@ userRoute.get('/SortByPrice', async (req, res)=>{
 });
 
 
-// route for getting photos of individual photographers
+// route for getting photos of individual trainers
 
 userRoute.get("/images/:id", async(req, res)=>{
-  const trainers=await UserModel.find({ _id: req.params.id,approved:true})
+  const trainers=await UserModel.find({_id:req.params.id,approved:true})
   const images=await Image.aggregate([
     {
       $group: {
@@ -218,7 +218,7 @@ userRoute.get("/images/:id", async(req, res)=>{
 // applying for trainer
 
 userRoute.post('/apply',authMiddleWare,async(req, res)=>{
-  const { name,email,camera,expertise,address,samplePics}=req.body;
+  const { name,email,expertise,address}=req.body;
   try 
   {
     let user = await UserModel.findOne({email});
@@ -228,10 +228,9 @@ userRoute.post('/apply',authMiddleWare,async(req, res)=>{
     }
     user.name=name;
     user.email=email;
-    user.camera=camera;
     user.expertise=expertise;
     user.address=address;
-    user.samplePics=samplePics;
+    // user.samplePics=samplePics;
     user.approved=false;
     user.role="trainer";
     await user.save();
@@ -322,7 +321,7 @@ userRoute.get("/:id",async (req, res)=>{
 
 userRoute.post('/block/:userId',authMiddleWare,checkRole("admin"),async (req, res)=>{
   try {
-    
+
     // Find the user by ID and update their `blocked` field to `true`
     const user = await UserModel.findByIdAndUpdate(req.params.userId, { isBlocked: true });
     if (!user) 
