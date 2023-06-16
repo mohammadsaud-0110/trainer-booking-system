@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FlexFit | ALL Trainer </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="/frontend/style/style.css">
+    <link rel="stylesheet" href="./style/abouttariner.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Start Header  -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="./images/logo.png" alt="" srcset="">
+            </div>
+            <a href="javascript:void(0)" class="ham-burger">
+                <span></span>
+                <span></span>
+            </a>
+            <div class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#price">Price</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#price">Login</a></li>
+                    <li><a href="#contact">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- End Header  -->
+
+    <div id="swiper-containerss">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img id="img1"src="" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img id="img2"src="" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img id="img3"src="" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img id="img4"src="" alt="">
+                </div>
+            </div>
+        </div>
+    </div> <br>
+    <div class="containerss">
+        <div class="abouts">
+            <div class="brief">
+                    <!-- <div id="dp">
+                        <img src="" alt="">
+                    </div> -->
+                <div id="details">
+                    <h2 id="name"></h2>
+                    <p id="place"></p>
+                </div>
+            </div>
+            <div id="photographer_nav">
+                <a href="#aboutme"> About Me</a>
+                <!-- <a href="#reviews">Reviews</a> -->
+                <!-- <a href="#works">How it works</a> -->
+            </div>
+            <!-- Loader -->
+            <div class="loader" id="loader">
+            </div>
+            <!-- Loader End -->
+            <div id="aboutme">
+                <p>Our gym is equipped with state-of-the-art facilities and equipment to cater to a wide range of fitness preferences and goals. From cutting-edge cardio machines and strength training equipment to spacious workout areas and dedicated studio spaces, we have everything you need to elevate your fitness experience. We take pride in maintaining a clean and well-maintained environment, ensuring your safety and comfort at all times.) </p>
+                <p id="equipment">
+                <!-- <h4>Equipment</h4> -->
+                <p><b>Trainer -</b> <span id="camera"></span></p>
+                </p>
+                <p id="good_with">
+                <h4>Good With</h4>
+                <p id="expertise"></p>
+                </p>
+            </div> <br>
+            <!-- <div id="reviews"></div> -->
+            <div id="works">
+                <h3>How it Works</h3>
+                <h5>Book</h5>
+                <p>Visit our gym's website or physical location to inquire about membership options.
+                    Our staff will guide you through the membership plans available, including pricing, duration, and any additional benefits.</p>
+                <h5>Shoot</h5>
+                <p>Once you've become a member, we'll schedule an orientation session to familiarize you with the gym's facilities, equipment, and guidelines.</p>
+                <h5>Enjoy!</h5>
+                <p>You may also undergo an assessment conducted by our trainers to evaluate your current fitness level, discuss your goals, and address any concerns or limitations..</p>
+            </div>
+        </div>
+        <div class="book">
+            <div>
+                <b>Start booking</b> <br>
+                <form>
+                    <label for="date">Start Time</label> <br>
+                    <input type="datetime-local" id="start">
+                    <label for="date">End Time</label> <br>
+                    <input type="datetime-local" id="end">
+                    <!-- <button id="time_btn" onclick="getTime()">Get Time </button> <br> -->
+               
+                    <p class="price"><b>Price -</b> <span>₹</span> <span id="price"></span></p>
+                    <input type="submit" value="Book Now">
+                </form>
+            </div>
+            <div id="results">
+                <h5> <span><ion-icon name="happy-outline"></ion-icon></span> ✅Satisfaction Gurantee</h5>
+                <h5><span><ion-icon name="close-circle-outline"></ion-icon></span> ✅Cancel within Anytime</h5>
+                <h5><span><ion-icon name="lock-open-outline"></ion-icon></span> ✅ 100% money back gurantee</h5>
+            </div>
+        </div>
+    </div> <br>
+    <footer>
+        <div>
+            <ul>
+                <li>Blog</li>
+                <li>Support</li>
+                <li>Terms</li>
+                <li>Privacy</li>
+            </ul>
+        </div>
+        <div>
+            <ion-icon name="logo-facebook"></ion-icon>
+            <ion-icon name="logo-instagram"></ion-icon>
+            <ion-icon name="logo-twitter"></ion-icon>
+            <span> | © 2023 FlexFit</span>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./scripts/abouttrainer.js"></script>
+
+    <script src="js/wow.min.js"></script>
+    <script>
+        wow = new WOW(
+            {
+                animateClass: 'animated',
+                offset: 0,
+            }
+        );
+        wow.init();
+    </script>
+</body>
+
+</html>

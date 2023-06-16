@@ -1,0 +1,173 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set a background color and font styles for the page */
+  body {
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/199/924/33/muscle-muscle-bodybuilding-press-wallpaper-preview.jpg");
+  }
+  
+  /* Center the main container */
+  .containerss {
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    justify-content: center;
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/199/924/33/muscle-muscle-bodybuilding-press-wallpaper-preview.jpg");
+  }
+  
+  /* Set styles for the about section */
+  .about {
+    background-color:gray;
+    padding: 40px;
+    margin: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: gray ;
+
+  }
+  #results{
+    padding-top: 15px;
+  }
+
+  .abouts{
+	padding:80px 0px;
+	background-color:#9b9b9b;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+  
+  .about h2 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    color: #ffffff;
+    line-height: 1.6;
+  }
+  
+  .about #equipment {
+    margin-top: 30px;
+  }
+  
+  .about #equipment b {
+    font-weight: bold;
+  }
+  
+  .about #good_with {
+    margin-top: 30px;
+  }
+  
+  .about #good_with h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .about #photographer_nav {
+    margin-top: 30px;
+  }
+  
+  .about #photographer_nav a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .about #photographer_nav a:hover {
+    color: #ff5c5c;
+  }
+  
+  /* Set styles for the works section */
+  #works {
+    margin-top: 30px;
+  }
+  
+  #works h3 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  #works h5 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+  
+  #works p {
+    color: #ffffff;
+    line-height: 1.6;
+  }
+  
+  /* Set styles for the book section */
+  .book {
+    background-color: #fff;
+    padding: 40px;
+    margin: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+  }
+  
+  .book b {
+    font-weight: bold;
+  }
+  
+  .book form {
+    margin-top: 20px;
+  }
+  
+  .book label,
+  .book input[type="datetime-local"],
+  .book select,
+  .book input[type="submit"] {
+    margin-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .book .price {
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  /* Set styles for the footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  footer ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  footer ul li {
+    margin-right: 10px;
+  }
+  
+  footer ion-icon {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 5px;
+  }
+  
+  footer span {
+    font-size: 14px;
+  }
+  
