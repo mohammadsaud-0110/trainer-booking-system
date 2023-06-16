@@ -1,13 +1,20 @@
 const express = require("express");
 const { connection } = require("./config/db");
-const { bookingRoute } = require("./controller/booking.route");
 const cors = require("cors");
 const { userRoute } = require("./controller/user.route");
+const { bookingRoute } = require("./controller/booking.route");
+const { authRoute } = require("./controller/auth.routes");
 require("dotenv").config();
 
 const app = express();
 app.use(express.json());
 app.use(cors());
+
+//---image upload
+app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
+app.set('view engine', 'ejs');
+////- image upload end
 
 app.get("/", (req, res) => {
   res.send({
@@ -56,6 +63,7 @@ app.use("/apidocs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.listen(process.env.serverPort, async () => {
   try {
     await connection;
+    console.log("Connected to DB");
     console.log("Server: " + process.env.serverPort);
   } catch (error) {
     console.log("Error: " + error.message);
