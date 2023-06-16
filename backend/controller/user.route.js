@@ -316,12 +316,13 @@ userRoute.get("/:id",async (req, res)=>{
   } 
   catch(error) 
   {
-    res.status(500).send({ msg: error.message,ok: false});
+    res.status(500).send({ msg: error.message,ok: false})
   }
 })
 
 userRoute.post('/block/:userId',authMiddleWare,checkRole("admin"),async (req, res)=>{
   try {
+    
     // Find the user by ID and update their `blocked` field to `true`
     const user = await UserModel.findByIdAndUpdate(req.params.userId, { isBlocked: true });
     if (!user) 
