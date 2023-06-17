@@ -3,7 +3,7 @@ const { connection } = require("./config/db");
 const cors = require("cors");
 const { userRoute } = require("./controller/user.route");
 const { bookingRoute } = require("./controller/booking.route");
-const { authRoute } = require("./controller/auth.routes");
+const { authRoute } = require("./controller/auth.route");
 require("dotenv").config();
 
 const app = express();
