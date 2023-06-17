@@ -9,7 +9,7 @@ form.addEventListener("submit", async(e)=>{
         pass:form.pwd.value
     }
     submit.style.display = "none";
-    showLoader2();
+   
     
     const request = await fetch(`${URL}/user/login`, {
         method:"POST",
@@ -34,16 +34,16 @@ form.addEventListener("submit", async(e)=>{
             localStorage.setItem("id",response.id)
             if(response.role == "photographer" && response.approved){
 
-                window.location.href = "./photographerDashboard.html"
-            } else if(response.role == "photographer"){
+                window.location.href = "./trainersdashboard.html"
+            } else if(response.role == "trainer"){
 
-                window.location.href = "./photographer_details.html"
+                window.location.href = "./trainer_detail.html"
             } else if(response.role == "admin"){
 
                 window.location.href = "./admin/admin.html"
             }else {
 
-                window.location.href = "./clientDashboard.html";
+                window.location.href = "./userDashboard.html";
             }
         },2000)
 
@@ -68,6 +68,6 @@ google.addEventListener("click", ()=>{
     window.location.href = ""
 })
 
-github.addEventListener("click", ()=>{
-    window.location.href = ""
-})
+// github.addEventListener("click", ()=>{
+//     window.location.href = ""
+// })
