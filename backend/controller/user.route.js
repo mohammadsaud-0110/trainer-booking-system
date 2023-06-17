@@ -2,7 +2,7 @@ const express = require("express");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const tokenList = {};
-const {authMiddleWare} = require("../middlewares/jwt.middleware");
+const {authMiddleWare} = require("../middleware/jwt.middleware");
 require("dotenv").config()
 const {UserModel}=require("../model/user.model");
 const {Image}=require("../model/image.model");
