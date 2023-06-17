@@ -310,8 +310,8 @@ userRoute.get("/:id",async (req, res)=>{
   try 
   {
     const user = await UserModel.findById({ _id:req.params.id });
-    const { name, email, role, approved, camera, expertise, address, price, _id } = user;
-    res.send({ ok: true, user: { name, email, role, approved, camera, expertise, address, price, _id } })
+    const { name, email, role, approved,  expertise, address, price, _id } = user;
+    res.send({ ok: true, user: { name, email, role, approved, expertise, address, price, _id } })
   } 
   catch(error) 
   {
