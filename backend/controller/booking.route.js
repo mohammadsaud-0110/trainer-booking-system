@@ -32,6 +32,7 @@ bookingRoute.get('/order/:userID', authMiddleWare, async (req, res) => {
 });
 
 bookingRoute.post('/book', authMiddleWare,async (req, res) => {
+  
     const { photographerId, startTime, endTime } = req.body;
   
     try {
