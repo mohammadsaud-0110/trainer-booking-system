@@ -1,4 +1,4 @@
-const URL = "";
+const URL = "https://rich-tan-cougar-tux.cyclic.app";
 
 // `${localStorage.getItem("token")}`;
 
@@ -124,67 +124,73 @@ switchMode.addEventListener("change", function () {
 dashboardFetch();
 
 async function dashboardFetch() {
-  // if (!localStorage.getItem("token")) {
-  // 	// alert("Login fisrt to access Admin Dashboard!");
-  // 	Swal.fire(
-  // 		'Login First!',
-  // 		'',
-  // 		'warning'
-  // 	)
-  // }
-  // else {
-  // 	newRequestDiv.style.display = "none";
-  // 	allRegistrationDiv.style.display = "none";
-  // 	bookingDiv.style.display = "none";
-  // 	boxDiv.style.display = "grid";
-  // 	// total bookings
-  // 	await fetch(`${URL}/book/`, {
-  // 		method: "GET",
-  // 		headers: {
-  // 			"Content-type": "application/json;charset=UTF-8",
-  // 			"authorization": `${localStorage.getItem("token")}`
-  // 		}
-  // 	})
-  // 		.then((res) => res.json())
-  // 		.then((data) => {
-  // 			let booknumber = document.querySelector("#total-booking")
-  // 			booknumber.textContent = `${data.data.length}`;
-  // 			// console.log(data.data.length);
-  // 		})
-  // 		.catch((err) => console.log(err));
-  // 	// --------------------all users number-----------------------
-  // 	await fetch(`${URL}/user/`, {
-  // 		method: "GET",
-  // 		headers: {
-  // 			"Content-type": "application/json;charset=UTF-8",
-  // 			"authorization": `${localStorage.getItem("token")}`
-  // 		}
-  // 	})
-  // 		.then((res) => res.json())
-  // 		.then((data) => {
-  // 			document.querySelector("#total-registration").textContent = `${data.length}`;
-  // 			let pendingNumber = 0, clientNumber = 0, photographerNumber = 0, blockedNumber = 0;
-  // 			data.forEach((ele) => {
-  // 				if (ele.isBlocked === true) {
-  // 					blockedNumber++;
-  // 				}
-  // 				else if (ele.role === "client") {
-  // 					clientNumber++;
-  // 				}
-  // 				else if (ele.role === "photographer" && ele.approved == true) {
-  // 					photographerNumber++;
-  // 				}
-  // 				else if (ele.role === "photographer" && ele.approved == false) {
-  // 					pendingNumber++;
-  // 				}
-  // 			})
-  // 			document.querySelector("#total-client").textContent = `${clientNumber}`
-  // 			document.querySelector("#total-photographer").textContent = `${photographerNumber}`
-  // 			document.querySelector("#new-pending-request").textContent = `${pendingNumber}`
-  // 			document.querySelector("#total-blocked").textContent = `${blockedNumber}`
-  // 		})
-  // 		.catch((err) => console.log(err));
-  // }
+  if (!localStorage.getItem("token")) {
+    // alert("Login fisrt to access Admin Dashboard!");
+    Swal.fire("Login First!", "", "warning");
+  } else {
+    newRequestDiv.style.display = "none";
+    allRegistrationDiv.style.display = "none";
+    bookingDiv.style.display = "none";
+    boxDiv.style.display = "grid";
+
+    // total bookings
+    await fetch(`${URL}/book/`, {
+      method: "GET",
+      headers: {
+        "Content-type": "application/json;charset=UTF-8",
+        authorization: `${localStorage.getItem("token")}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        let booknumber = document.querySelector("#total-booking");
+        booknumber.textContent = `${data.data.length}`;
+        // console.log(data.data.length);
+      })
+      .catch((err) => console.log(err));
+
+    // --------------------all users number-----------------------
+
+    await fetch(`${URL}/user/`, {
+      method: "GET",
+      headers: {
+        "Content-type": "application/json;charset=UTF-8",
+        authorization: `${localStorage.getItem("token")}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        document.querySelector(
+          "#total-registration"
+        ).textContent = `${data.length}`;
+        let pendingNumber = 0,
+          clientNumber = 0,
+          trainerNumber = 0,
+          blockedNumber = 0;
+        data.forEach((ele) => {
+          if (ele.isBlocked === true) {
+            blockedNumber++;
+          } else if (ele.role === "client") {
+            clientNumber++;
+          } else if (ele.role === "trainer" && ele.approved == true) {
+            trainerNumber++;
+          } else if (ele.role === "trainer" && ele.approved == false) {
+            pendingNumber++;
+          }
+        });
+        document.querySelector("#total-client").textContent = `${clientNumber}`;
+        document.querySelector(
+          "#total-trainer"
+        ).textContent = `${trainerNumber}`;
+        document.querySelector(
+          "#new-pending-request"
+        ).textContent = `${pendingNumber}`;
+        document.querySelector(
+          "#total-blocked"
+        ).textContent = `${blockedNumber}`;
+      })
+      .catch((err) => console.log(err));
+  }
 }
 
 let ds = document.querySelectorAll(".sdbtn");
@@ -196,8 +202,8 @@ ds.forEach((ele) => {
       fetchNewRequest();
     } else if (e.target.innerText === "Clients") {
       fetchAllClients();
-    } else if (e.target.innerText === "Photographers") {
-      fetchAllPhotographers();
+    } else if (e.target.innerText === "trainers") {
+      fetchAllTrainers();
     } else if (e.target.innerText === "Booking Orders") {
       fetchAllBooking();
     } else if (e.target.innerText === "Dashboard") {
@@ -278,8 +284,8 @@ function showAllRegistration(data) {
     td3.textContent = ele.role;
     if (ele.role === "client") {
       btr.setAttribute("class", "status client");
-    } else if (ele.role === "photographer") {
-      btr.setAttribute("class", "status photographer");
+    } else if (ele.role === "trainer") {
+      btr.setAttribute("class", "status trainer");
     } else if (ele.role === "admin") {
       btr.setAttribute("class", "status admin");
     }
@@ -323,7 +329,6 @@ function showAllRegistration(data) {
 
 // fetch all clients
 async function fetchAllClients() {
-  console.log(233456);
   if (!localStorage.getItem("token")) {
     Swal.fire("Login First!", "", "warning");
   } else {
@@ -420,23 +425,23 @@ function showClients(data) {
   tableParent.append(table);
 }
 
-// fetch all photographer
-async function fetchAllPhotographers() {
+// fetch all trainer
+async function fetchAllTrainers() {
   if (!localStorage.getItem("token")) {
     Swal.fire("Login First!", "", "warning");
   } else {
     if (allUserData.length > 1) {
-      let allphotographers = allUserData.filter((ele, index) => {
+      let alltrainers = allUserData.filter((ele, index) => {
         return (
-          ele.role == "photographer" &&
+          ele.role == "trainer" &&
           ele.approved == true &&
           ele.isBlocked == false
         );
       });
-      showPhotographers(allphotographers);
-      // console.log(allphotographers)
+      showTrainers(alltrainers);
+      console.log(alltrainers);
     } else {
-      let allphotographers = [];
+      let alltrainers = [];
       await fetch(`${URL}/user/`, {
         method: "GET",
         headers: {
@@ -446,22 +451,22 @@ async function fetchAllPhotographers() {
       })
         .then((res) => res.json())
         .then((data) => {
-          allphotographers = data.filter((ele, index) => {
+          alltrainers = data.filter((ele, index) => {
             return (
-              ele.role == "photographer" &&
+              ele.role == "trainer" &&
               ele.approved == true &&
               ele.isBlocked == false
             );
           });
-          showPhotographers(allphotographers);
-          // console.log(allphotographers)
+          showTrainers(alltrainers);
+          // console.log(alltrainers)
         })
         .catch((err) => console.log(err));
     }
   }
 }
-//show all photographers
-function showPhotographers(data) {
+//show all trainers
+function showTrainers(data) {
   boxDiv.style.display = "none";
   newRequestDiv.style.display = "none";
   allRegistrationDiv.style.display = "block";
@@ -486,8 +491,6 @@ function showPhotographers(data) {
   th2.textContent = "Email";
   let th3 = document.createElement("th");
   th3.textContent = "Address";
-  let th4 = document.createElement("th");
-  th4.textContent = "Camera";
   let th5 = document.createElement("th");
   th5.textContent = "Expertise";
   let th6 = document.createElement("th");
@@ -495,7 +498,7 @@ function showPhotographers(data) {
   th6.textContent = "Price per Hour";
   let th7 = document.createElement("th");
   th7.textContent = "Action";
-  theadtr.append(th1, th2, th3, th4, th5, th6, th7);
+  theadtr.append(th1, th2, th3, th5, th6, th7);
 
   thead.append(theadtr);
 
@@ -504,7 +507,7 @@ function showPhotographers(data) {
   data.forEach((ele) => {
     // creating table row for tbody
     let btr = document.createElement("tr");
-    btr.setAttribute("class", "photographer");
+    btr.setAttribute("class", "trainer");
 
     // creating table cell td for data
     let td1 = document.createElement("td");
@@ -513,8 +516,6 @@ function showPhotographers(data) {
     td2.textContent = ele.email;
     let td3 = document.createElement("td");
     td3.textContent = ele.address;
-    let td4 = document.createElement("td");
-    td4.textContent = ele.camera;
     let td5 = document.createElement("td");
     td5.textContent = ele.expertise;
     let td6 = document.createElement("td");
@@ -530,11 +531,11 @@ function showPhotographers(data) {
     removebtn.style.border = "none";
     removebtn.setAttribute("class", "redbtn");
     removebtn.addEventListener("click", () => {
-      blockUser(ele, "All Photographer");
+      blockUser(ele, "All trainer");
     });
     td7.append(removebtn);
 
-    btr.append(td1, td2, td3, td4, td5, td6, td7);
+    btr.append(td1, td2, td3, td5, td6, td7);
 
     tbody.append(btr);
   });
@@ -558,6 +559,7 @@ async function fetchNewRequest() {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
         if (data.message == "Unauthorized") {
           alert("Login First");
         } else {
@@ -593,13 +595,11 @@ function showNewRequest(data) {
   th2.textContent = "Email";
   let th3 = document.createElement("th");
   th3.textContent = "Address";
-  let th4 = document.createElement("th");
-  th4.textContent = "Camera";
   let th5 = document.createElement("th");
   th5.textContent = "Expertise";
   let th6 = document.createElement("th");
   th6.textContent = "Action";
-  theadtr.append(th1, th2, th3, th4, th5, th6);
+  theadtr.append(th1, th2, th3, th5, th6);
   thead.append(theadtr);
 
   //creating tbody for table
@@ -615,8 +615,6 @@ function showNewRequest(data) {
     td2.textContent = ele.email;
     let td3 = document.createElement("td");
     td3.textContent = ele.address;
-    let td4 = document.createElement("td");
-    td4.textContent = ele.camera;
     let td5 = document.createElement("td");
     td5.textContent = ele.expertise;
     let td6 = document.createElement("td");
@@ -643,7 +641,7 @@ function showNewRequest(data) {
 
     td6.append(yesbtn, nobtn);
 
-    btr.append(td1, td2, td3, td4, td5, td6);
+    btr.append(td1, td2, td3, td5, td6);
 
     tbody.append(btr);
   });
@@ -666,7 +664,7 @@ async function fetchAllBooking() {
     })
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data.data);
+        // console.log(data);
         showBooking(data.data);
       })
       .catch((err) => console.log(err));
@@ -675,10 +673,6 @@ async function fetchAllBooking() {
 //show all bookings
 function showBooking(data) {
   // console.log(data);
-  let a = 1;
-  data.forEach((el) => {
-    console.log(el.client.name + "  " + a++ + "  " + el.photographer.name);
-  });
 
   allRegistrationDiv.style.display = "none";
   boxDiv.style.display = "none";
@@ -701,7 +695,7 @@ function showBooking(data) {
   let th1 = document.createElement("th");
   th1.textContent = "Client";
   let th2 = document.createElement("th");
-  th2.textContent = "Photographer";
+  th2.textContent = "Trainer";
   // let th3 = document.createElement("th");
   // th3.textContent = "Created At";
   let th4 = document.createElement("th");
@@ -716,20 +710,17 @@ function showBooking(data) {
   // creating tbody to append booking data
   let tbody = document.createElement("tbody");
   data.forEach((ele) => {
-    // if(!ele.client.name || !ele.photographer.name){
-    // 	con
-    // }
     // creating table row for tbody
     let btr = document.createElement("tr");
     btr.setAttribute("class", "trbooking");
 
     // creating table cell td for data
     let td1 = document.createElement("td");
-    td1.textContent = ele.client.name || "Empty";
+    td1.textContent = ele.client.name;
     // td1.setAttribute("class","tdbooking");
     let td2 = document.createElement("td");
 
-    td2.textContent = ele.photographer.name || "Empty";
+    td2.textContent = ele.trainer.name;
 
     // td2.setAttribute("class","tdbooking");
     // let td3 = document.createElement("td");
@@ -769,7 +760,7 @@ function formatTime(time) {
   return normalTime;
 }
 
-// ----------approving photographer request
+// ----------approving trainer request
 async function approveRequest(user) {
   user.approved = true;
   await fetch(`${URL}/user/applications/${user.email}`, {
@@ -782,7 +773,7 @@ async function approveRequest(user) {
   })
     .then((response) => response.json())
     .then((json) => {
-      Swal.fire("Photographer Request Accepted!", "", "success");
+      Swal.fire("Trainer Request Accepted!", "", "success");
     })
     .catch((err) => console.log(err))
     .finally(() => {
@@ -790,7 +781,7 @@ async function approveRequest(user) {
     });
 }
 
-// ----------rejecting photographer request
+// ----------rejecting trainer request
 async function rejectRequest(user) {
   user.approved = false;
 
@@ -804,7 +795,7 @@ async function rejectRequest(user) {
   })
     .then((response) => response.json())
     .then((json) => {
-      Swal.fire("Photographer Request Rejected!", "", "error");
+      Swal.fire("Trainer Request Rejected!", "", "error");
     })
     .catch((err) => console.log(err))
     .finally(() => {
@@ -833,12 +824,12 @@ async function blockUser(user, msg) {
     fetchAllRegistration();
   } else if (msg === "All Client") {
     fetchAllClients();
-  } else if (msg === "All Photographer") {
-    fetchAllPhotographers();
+  } else if (msg === "All Trainer") {
+    fetchAllTrainers();
   }
 }
 
 let readDoc = document.querySelector("#btn-read-doc");
 readDoc.addEventListener("click", (e) => {
-  window.location.href = "https://bookmyshoot-backend.onrender.com/api-docs/";
+  window.location.href = "https://rich-tan-cougar-tux.cyclic.app/api-docs/";
 });
