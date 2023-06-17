@@ -24,7 +24,6 @@ li {
 	--grey: #eee;
 	--dark-grey: #AAAAAA;
 	--dark: #342E37;
-	--sidedark: #342E36;
 	--red: #DB504A;
 	--yellow: #FFCE26;
 	--light-yellow: #FFF2C6;
@@ -40,7 +39,6 @@ body.dark {
 	--light: #0C0C1E;
 	--grey: #060714;
 	--dark: #FBFBFB;
-	--sidedark: #FFCE26;;
 }
 
 body {
@@ -112,7 +110,7 @@ body {
 	position: absolute;
 	width: 40px;
 	height: 40px;
-	border-radius: 36%;
+	border-radius: 50%;
 	top: -40px;
 	right: 0;
 	box-shadow: 20px 20px 0 var(--grey);
@@ -137,7 +135,7 @@ body {
 	align-items: center;
 	border-radius: 48px;
 	font-size: 16px;
-	color: var(--sidedark);
+	color: var(--dark);
 	white-space: nowrap;
 	overflow-x: hidden;
 }
