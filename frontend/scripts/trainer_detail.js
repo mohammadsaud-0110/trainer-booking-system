@@ -1,7 +1,7 @@
 const dropZone = document.getElementById('dropZone');
 const uploadForm = document.getElementById('uploadForm');
 const detailsForm = document.getElementById('details_Form');
-const url = "https://bookmyshoot-backend.onrender.com"
+const url = "https://flexfit.onrender.com"
 // prevent default drag behaviors
 if (dropZone) {
   ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
@@ -66,13 +66,13 @@ async function handleFiles(files) {
 detailsForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const formData = {
-    camera: detailsForm.camera.value,
+    // camera: detailsForm.camera.value,
     expertise: detailsForm.expertise.value,
     address: detailsForm.address.value,
     price: detailsForm.price.value
   }
 
-  const request = await fetch(`${url}/user/submit_photographer_details`, {
+  const request = await fetch(`${url}/user/submittrainerdetails`, {
     method: "PATCH",
     headers: {
       "Content-type": "application/json",
@@ -90,7 +90,7 @@ detailsForm.addEventListener("submit", async (e) => {
       'success'
     )
     setTimeout(() => {
-      window.location.href = "./photographerDashboard.html";
+      window.location.href = "./trainersdashboard.html";
     }, 2500)
   }
 })

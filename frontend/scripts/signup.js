@@ -3,7 +3,7 @@ const URL = "https://flexfit.onrender.com"
 
 const signup = document.getElementById("submit");
 const client_checked= document.getElementById("radio1")
-const photographer_checked= document.getElementById("radio2")
+const trainer_checked= document.getElementById("radio2")
 form.addEventListener("submit", async(e)=>{
     const checkedValue = document.querySelector('input[type=radio]:checked').value;
     e.preventDefault();
@@ -14,7 +14,7 @@ form.addEventListener("submit", async(e)=>{
         role:checkedValue
     }
     signup.style.display = "none";
-    showLoader2();
+    // showLoader2();
 
     const request = await fetch(`${URL}/user/register`, {
         method:"POST",
@@ -43,7 +43,7 @@ form.addEventListener("submit", async(e)=>{
             footer: `<b><u><a href="./login.html">Login Here!</a></u></b>`
         });
     }
-    hideLoader2();
+    // hideLoader2();
     signup.style.display = "block";
 })
 
@@ -55,6 +55,3 @@ google.addEventListener("click", ()=>{
     window.location.href = ""
 })
 
-github.addEventListener("click", ()=>{
-    window.location.href = ""
-})
