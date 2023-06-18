@@ -6,7 +6,7 @@
 A health trainer booking system allows logged-in users to book a training session with their desired trainer. <br>
 Enthusiastic and professional trainers can apply to become registered trainer on our website.
 
-#### Our Project is delpoyed here [FlexFit](https://majestic-puffpuff-66e968.netlify.app)
+#### Our Project is delpoyed here [FlexFit](https://majestic-puffpuff-66e968.netlify.app/)
 
 ### Team 
 - :man_technologist: [Saud](https://www.linkedin.com/in/mdsaud/)
