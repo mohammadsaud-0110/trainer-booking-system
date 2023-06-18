@@ -48,7 +48,7 @@ If you are a professional or aspiring photographer, you have the opportunity to 
 
 
 ### Deloployed Links
-Backend on [Render](https://rich-tan-cougar-tux.cyclic.app) <br>
+Backend on [Cyclic](https://rich-tan-cougar-tux.cyclic.app) <br>
 Frontend on [Netlify](https://majestic-puffpuff-66e968.netlify.app/)
 
 
