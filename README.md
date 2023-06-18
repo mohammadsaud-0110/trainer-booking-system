@@ -1,12 +1,12 @@
-![LogoMakerCa-1686673032510-removebg-preview](https://github.com/mohammadsaud-0110/chic-smell-305/assets/112760057/cea36a32-7448-4758-8b2b-b2a81b0a3603)
+![LogoMakerCa-1686673032510-removebg-preview](https://github.com/mohammadsaud-0110/chic-smell-305/assets/112760057/013094ff-5189-4456-a4a3-15f3a2abbbd3)
 
 
-# FlexFit
+# FlexFit :runner:
 
-A photographer booking system allows logged-in users to book a shoot with their desired photographer. <br>
-Enthusiastic and professional photographers can apply to become photographers on our website.
+A health trainer booking system allows logged-in users to book a training session with their desired trainer. <br>
+Enthusiastic and professional trainers can apply to become registered trainer on our website.
 
-#### Our Project is delpoyed here [Book My Shoot](https://bookmyshoot.netlify.app/)
+#### Our Project is delpoyed here [FlexFit](https://bookmyshoot.netlify.app/)
 
 ### Team 
 - :man_technologist: [Saud](https://www.linkedin.com/in/mdsaud/)
