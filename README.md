@@ -44,11 +44,11 @@ If you are a professional or aspiring photographer, you have the opportunity to 
 
 ### Have a look at our routes in `Swagger`
 
-[API](https://flexfit.onrender.com/apidocs/)
+<!-- [API](https://flexfit.onrender.com/apidocs/) -->
 
 
 ### Deloployed Links
-Backend on [Render]([https://flexfit.onrender.com](https://rich-tan-cougar-tux.cyclic.app)) <br>
+Backend on [Render](https://rich-tan-cougar-tux.cyclic.app) <br>
 Frontend on [Netlify](https://bookmyshoot.netlify.app/)
 
 
