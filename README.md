@@ -44,11 +44,13 @@ If you are a professional or aspiring photographer, you have the opportunity to 
 
 ### Have a look at our routes in `Swagger`
 
-[API](https://bookmyshoot-backend.onrender.com/api-docs)
+[API](https://flexfit.onrender.com/apidocs/)
+
 
 ### Deloployed Links
-Backend on [Render](https://bookmyshoot-backend.onrender.com) <br>
+Backend on [Render](https://flexfit.onrender.com) <br>
 Frontend on [Netlify](https://bookmyshoot.netlify.app/)
+
 
 ### Tech Stack
 
@@ -63,7 +65,6 @@ Frontend on [Netlify](https://bookmyshoot.netlify.app/)
 -  Redis
 -  Passport
 -  PeerJS
--  Socket.io
 -  Multer
 
 #### DataBase
@@ -76,10 +77,10 @@ Frontend on [Netlify](https://bookmyshoot.netlify.app/)
 ![index](https://github.com/git-rishab/accessible-juice-7886/assets/114225283/4975d61a-6fc2-4c14-ae97-acd8be0d586b)
 
 
-#### Photographers Dashboard
-![photogrpahers](https://github.com/git-rishab/accessible-juice-7886/assets/114225283/de0d6ff6-2e94-4f02-9c9d-e15098caa654)
+#### Trainer Dashboard
+![trainers](https://github.com/git-rishab/accessible-juice-7886/assets/114225283/de0d6ff6-2e94-4f02-9c9d-e15098caa654)
 
 
 #### Photographer Page
 
-![individual](https://github.com/git-rishab/accessible-juice-7886/assets/114225283/05bd5907-0e3c-46f0-9070-d5611afca54a)
+![trainer](https://github.com/git-rishab/accessible-juice-7886/assets/114225283/05bd5907-0e3c-46f0-9070-d5611afca54a)
