@@ -48,7 +48,7 @@ If you are a professional or aspiring photographer, you have the opportunity to 
 
 
 ### Deloployed Links
-Backend on [Render](https://flexfit.onrender.com) <br>
+Backend on [Render]([https://flexfit.onrender.com](https://rich-tan-cougar-tux.cyclic.app)) <br>
 Frontend on [Netlify](https://bookmyshoot.netlify.app/)
 
 
@@ -74,13 +74,49 @@ Frontend on [Netlify](https://bookmyshoot.netlify.app/)
 ### Take a glimpse of our website
 
 #### Home Page
-![index](https://github.com/git-rishab/accessible-juice-7886/assets/114225283/4975d61a-6fc2-4c14-ae97-acd8be0d586b)
 
+![Screenshot (56)](https://github.com/mohammadsaud-0110/chic-smell-305/assets/115496150/9de7a3bb-b1a9-4b90-b34e-df154669dc4c)
+
+![Screenshot (71)](https://github.com/mohammadsaud-0110/chic-smell-305/assets/115496150/0ec9c338-27d8-485b-8e32-ef1b282e794f)
+
+![Screenshot (59)](https://github.com/mohammadsaud-0110/chic-smell-305/assets/115496150/27382c9b-7644-4c8d-b813-12e3f707d86f)
+
+![Screenshot (60)](https://github.com/mohammadsaud-0110/chic-smell-305/assets/115496150/9930f91c-d405-48ff-aced-f248ff323310)
+
+#### Signupup
+
+![Screenshot (62)](https://github.com/mohammadsaud-0110/chic-smell-305/assets/115496150/c6d68666-62b3-467a-bfb1-ced57ab51e84)
+
+#### Login
+
+![Screenshot (61)](https://github.com/mohammadsaud-0110/chic-smell-305/assets/115496150/bee8217a-d5b8-4b28-bffd-87c6cad2c3a8)
 
 #### Trainer Dashboard
-![trainers](https://github.com/git-rishab/accessible-juice-7886/assets/114225283/de0d6ff6-2e94-4f02-9c9d-e15098caa654)
 
+![Screenshot (69)](https://github.com/mohammadsaud-0110/chic-smell-305/assets/115496150/4445cc51-b98d-401e-845d-12ba8b88863c)
 
-#### Photographer Page
+![Screenshot (66)](https://github.com/mohammadsaud-0110/chic-smell-305/assets/115496150/e192c491-778f-4e77-bb72-b29fb72e25d8)
 
-![trainer](https://github.com/git-rishab/accessible-juice-7886/assets/114225283/05bd5907-0e3c-46f0-9070-d5611afca54a)
+#### Trainers Details
+
+![Screenshot (64)](https://github.com/mohammadsaud-0110/chic-smell-305/assets/115496150/8a521e76-6419-4c8f-96b3-f9323c2a4621)
+
+#### Client Dashboard
+
+![Screenshot (63)](https://github.com/mohammadsaud-0110/chic-smell-305/assets/115496150/0ad860da-59e5-4142-9113-fa67edb3d493)
+
+#### Admin Dashboard
+
+![Screenshot (52)](https://github.com/mohammadsaud-0110/chic-smell-305/assets/115496150/562a7c91-570c-4bc5-b18d-e4cffea91c06)
+
+![Screenshot (53)](https://github.com/mohammadsaud-0110/chic-smell-305/assets/115496150/789fdf1d-2162-44f7-baf4-57fb4965c4f3)
+
+![Screenshot (54)](https://github.com/mohammadsaud-0110/chic-smell-305/assets/115496150/29b62844-ce91-436c-8b91-c8d82a29f8dd)
+
+#### Payment
+
+![Screenshot (67)](https://github.com/mohammadsaud-0110/chic-smell-305/assets/115496150/2bffc955-f7b7-4eb5-89ac-f574d8fa4d88)
+
+#### Logout
+
+![Screenshot (70)](https://github.com/mohammadsaud-0110/chic-smell-305/assets/115496150/6d3765bf-7177-4167-bf3d-c6a13b12bb6d)
