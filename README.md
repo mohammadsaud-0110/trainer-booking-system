@@ -1,6 +1,7 @@
-![logo](https://github.com/git-rishab/accessible-juice-7886/assets/114225283/a1f3dc00-1841-47f6-a651-3938d209dc6c)
+![LogoMakerCa-1686673032510-removebg-preview](https://github.com/mohammadsaud-0110/chic-smell-305/assets/112760057/cea36a32-7448-4758-8b2b-b2a81b0a3603)
 
-# FlexFit: dumbbell:
+
+# FlexFit
 
 A photographer booking system allows logged-in users to book a shoot with their desired photographer. <br>
 Enthusiastic and professional photographers can apply to become photographers on our website.
