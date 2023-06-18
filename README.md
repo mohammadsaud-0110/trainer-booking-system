@@ -1,20 +1,18 @@
-# FlexFit
-
 ![logo](https://github.com/git-rishab/accessible-juice-7886/assets/114225283/a1f3dc00-1841-47f6-a651-3938d209dc6c)
 
+# FlexFit: dumbbell:
 
-# Book My Shoot :camera_flash:
 A photographer booking system allows logged-in users to book a shoot with their desired photographer. <br>
 Enthusiastic and professional photographers can apply to become photographers on our website.
 
 #### Our Project is delpoyed here [Book My Shoot](https://bookmyshoot.netlify.app/)
 
 ### Team 
-- :man_technologist: [Rishab](https://www.linkedin.com/in/rishab-kumar-chaurasiya-a144b4234/)
-- :man_technologist: [Kuldeep](https://www.linkedin.com/in/kuldeep-tiwari-a3637923a)
 - :man_technologist: [Saud](https://www.linkedin.com/in/mdsaud/)
-- :woman_technologist: [Nishtha](https://www.linkedin.com/in/nishthakashyap26/)
-- :man_technologist: [Anil](https://www.linkedin.com/in/anil-reddy-b2a364169/)
+- :man_technologist: [Mayank](https://www.linkedin.com/in/mayank-kiran-khobragade/)
+- :man_technologist: [Debraj](https://www.linkedin.com/in/debrajj/)
+- :man_technologist: [Anurag](https://www.linkedin.com/in/)
+- :man_technologist: [Sherman](https://www.linkedin.com/in/sharman-debnath-8878a8205/)
 
 ## Features & Pages :page_facing_up:
 
