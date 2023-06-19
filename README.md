@@ -44,7 +44,7 @@ If you are a professional or aspiring photographer, you have the opportunity to 
 
 ### Have a look at our routes in `Swagger`
 
-<!-- [API](https://flexfit.onrender.com/apidocs/) -->
+[API](https://flexfit.onrender.com/apidocs/)
 
 
 ### Deloployed Links
