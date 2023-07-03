@@ -6,7 +6,7 @@
 A health trainer booking system allows logged-in users to book a training session with their desired trainer. <br>
 Enthusiastic and professional trainers can apply to become registered trainer on our website.
 
-#### Our Project is delpoyed here [FlexFit](https://imaginative-kataifi-15db41.netlify.app/)
+#### Our Project is delpoyed here [FlexFit](https://flexfit-frontend.vercel.app/)
 
 ### Team 
 - :man_technologist: [Saud](https://www.linkedin.com/in/mdsaud/)
@@ -49,7 +49,7 @@ If you are a professional or aspiring photographer, you have the opportunity to 
 
 ### Deloployed Links
 Backend on [Cyclic](https://rich-tan-cougar-tux.cyclic.app) <br>
-Frontend on [Netlify](https://imaginative-kataifi-15db41.netlify.app/)
+Frontend on [Netlify](https://flexfit-frontend.vercel.app/)
 
 
 ### Tech Stack
