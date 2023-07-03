@@ -48,8 +48,8 @@ If you are a professional or aspiring photographer, you have the opportunity to 
 
 
 ### Deloployed Links
-Backend on [Cyclic](https://flexfit-khaki.vercel.app) <br>
-Frontend on [Netlify](https://flexfit-frontend.vercel.app/)
+Backend on [Cyclic](https://flexfit-git-main-anurag1109.vercel.app/) <br>
+Frontend on [Cyclic](https://flexfit-frontend.vercel.app/)
 
 
 ### Tech Stack
